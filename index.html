@@ -11,30 +11,31 @@
         <section id="input-section">
         
             <div class="form-input">
-                <label for="title">Title</label>
-                <input id="title" type="text" required>
+                <label for="titleInput">Title</label>
+                <input id="titleInput" type="text" required>
             </div>
             <div class="form-input">
-                <label for="author">Author</label>
-                <input id="author" type="text" required>
+                <label for="authorInput">Author</label>
+                <input id="authorInput" type="text" required>
             </div>
             <div class="form-input">
-                <label for="pages">Pages</label>
-                <input id="numbers" type="number" required>
+                <label for="pagesInput">Pages</label>
+                <input id="pagesInput" type="number" required>
             </div>
             <div class="form-input"> Read
-                <label id="read" class="switch"> 
-                    <input id="read" type="checkbox">
+                <label for="readInput" class="switch">  
+                    <input id="readInput" type="checkbox">
                     <span class="slider round"></span>
                   </label>
             </div>
         </section>
         <section id="button-section">
             <div id="button-container">
-                <button>Submit</button>
+                <input type="button" value="submit" onclick="Book()">
             </div>
         </section>
     </form>
-<script src="./JavaScript/script.js"></script>
+    <div id="libraryContainer"></div>
+    <script src="./JavaScript/script.js"></script>
 </body>
 </html>
