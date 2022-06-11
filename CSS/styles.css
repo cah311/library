@@ -1,5 +1,17 @@
 form {
     border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+#input-section {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0.5rem;
 }
 
 /* The switch - the box around the slider */
@@ -63,6 +75,10 @@ form {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  label.switch {
+      padding-right: 40px;
   }
 
 
