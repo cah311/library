@@ -6,7 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <h1>Reading List</h1>
+    <form id="form" action="" method="post">
+        <section id="input-section">
+        
+            <div class="form-input">
+                <label for="title">Title</label>
+                <input id="title" type="text" required>
+            </div>
+            <div class="form-input">
+                <label for="author">Author</label>
+                <input id="author" type="text" required>
+            </div>
+            <div class="form-input">
+                <label for="pages">Pages</label>
+                <input id="numbers" type="number" required>
+            </div>
+            <div class="form-input">
+                <label id="read" class="switch"> Read
+                    <input id="read" type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+        </section>
+        <section id="button-section">
+            <div id="button-container">
+                <button>Submit</button>
+            </div>
+        </section>
+    </form>
 <script src="./JavaScript/script.js"></script>
 </body>
 </html>
