@@ -5,9 +5,9 @@ function Book() {
     this.name = document.getElementById('titleInput').value
     this.author = document.getElementById('authorInput').value
     this.pages = document.getElementById('pagesInput').value
-    this.read = document.getElementById('readInput').value
+    this.read = readToggle()
     readToggle()
-    return this.name, this.author, this.pages, readToggle()
+    return (this.name, this.author, this.pages, readToggle())
     
 }
 
@@ -17,9 +17,11 @@ function readToggle() {
     if (readToggle.checked) {
         status = 'read'
         return status
+        console.log(status)
     } else {
         status = 'not read'
         return status
+        console.log(status)
     }
     
 }
@@ -33,7 +35,7 @@ function addBookToLibrary() {
 
     const library = document.createElement('div');
     library.classList.add('books')
-    library.textContent = newBook
+    library.textContent = myLibrary[0]
 
     librarySection.appendChild(library)
     
