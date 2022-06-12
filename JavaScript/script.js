@@ -1,16 +1,13 @@
 let myLibrary = [];
+const librarySection = document.querySelector('#libraryContainer')
 
 function Book() {
     this.name = document.getElementById('titleInput').value
     this.author = document.getElementById('authorInput').value
     this.pages = document.getElementById('pagesInput').value
     this.read = document.getElementById('readInput').value
-    // this.info = function() {
-    //    return name + " by " + author + " , " + pages + " , " + read 
-    // }
     readToggle()
-
-    console.log(this.name, this.author, this.pages, readToggle())
+    return this.name, this.author, this.pages, readToggle()
     
 }
 
@@ -27,18 +24,20 @@ function readToggle() {
     
 }
 
+function addBookToLibrary() {
+    let newBookArray = new Book()
+    let newBook = Object.values(newBookArray)
+    myLibrary.unshift(newBook)
 
-// const book1 = new Book('The Hobbit', "J.R.R. Tolkien", "295 pages", "have read")
-// const book2 = new Book('LOTR 1', "J.R.R. Tolkien", "2195 pages", "have read")
-// const book3 = new Book('LORT 2', "J.R.R. Tolkien", "2323 pages", "have read")
 
-function addBookToLibary(x) {
-    myLibrary.unshift(x)
+
+    const library = document.createElement('div');
+    library.classList.add('books')
+    library.textContent = newBook
+
+    librarySection.appendChild(library)
+    
+    console.log(newBook)
+    console.log(myLibrary)
 };
-
-// addBookToLibary(book1)
-// addBookToLibary(book2)
-// addBookToLibary(book3)
-
-// console.log(myLibrary)
 
