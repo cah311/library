@@ -1,0 +1,5 @@
+to do: 
+1. change form input from permanent to pop up at the puch if a button 
+2. Add a change reach status button 
+3. aad a remove button 
+4. style better
