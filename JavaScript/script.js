@@ -38,15 +38,26 @@ function addBookToLibrary() {
 
     
     let bookStackTop = document.createElement('div');
+    bookStackTop.classList.add('bookBinding')
     bookStackTop.setAttribute('id', `book${x}`)
-    bookStackTop.textContent = myLibrary[0]
+
+    let bookTitle = document.createElement('div')
+    bookTitle.classList.add('bookTitle')
+    bookTitle.textContent = (`${newBookArray.name}`)
+
+    let bookAuthor = document.createElement('div')
+    bookAuthor.classList.add('bookAuthor')
+    bookAuthor.textContent = (`By ${newBookArray.author}`)
+
+
+    // bookStackTop.textContent = myLibrary[0]
+    // bookStackTop.textContent = (`${newBookArray.name}`)
 
 
     librarySection.insertBefore(bookStackTop, libraryStart)
+    bookStackTop.appendChild(bookTitle)
+    bookStackTop.appendChild(bookAuthor)
     librarySection.insertBefore( libraryStart, bookStackTop)
-    
-    // librarySection.appendChild(bookStackTop)
-    
     
 
     console.log(bookStackTop.id)
