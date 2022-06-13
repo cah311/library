@@ -16,10 +16,10 @@ function readToggle() {
     let readToggle = document.querySelector('#readInput')
     let status;
     if (readToggle.checked) {
-        status = 'read'
+        status = 'Have read'
         return status
     } else {
-        status = 'not read'
+        status = 'Have not read'
         return status
         
     }
@@ -48,6 +48,14 @@ function addBookToLibrary() {
     let bookAuthor = document.createElement('div')
     bookAuthor.classList.add('bookAuthor')
     bookAuthor.textContent = (`By ${newBookArray.author}`)
+    
+    let bookPages = document.createElement('div')
+    bookPages.classList.add('bookPages')
+    bookPages.textContent = (` ${newBookArray.pages}`)
+
+    let bookRead = document.createElement('div')
+    bookRead.classList.add('bookRead')
+    bookRead.textContent = (` ${newBookArray.read}`)
 
 
     // bookStackTop.textContent = myLibrary[0]
@@ -57,6 +65,8 @@ function addBookToLibrary() {
     librarySection.insertBefore(bookStackTop, libraryStart)
     bookStackTop.appendChild(bookTitle)
     bookStackTop.appendChild(bookAuthor)
+    bookStackTop.appendChild(bookPages)
+    bookStackTop.appendChild(bookRead)
     librarySection.insertBefore( libraryStart, bookStackTop)
     
 

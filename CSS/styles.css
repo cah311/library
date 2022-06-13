@@ -26,19 +26,23 @@ form {
     border: 3px solid red;
     border-radius: 15px;
     background-color: green;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .bookTitle {
-    border: 2px solid black;
-    border-radius: 15px;
+    /* border: 2px solid black;
+    border-radius: 15px; */
     padding: 0.5;
     margin: 0.5;
 }
 
 .bookAuthor {
-    border: 2px solid black;
-    border-radius: 15px;
+    /* border: 2px solid black;
+    border-radius: 15px; */
     padding: 0.5;
     margin: 0.5;
 }
